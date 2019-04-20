@@ -1,0 +1,128 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>Team GB</title>
+    <meta name="description" content="Team GB">
+    <meta name="Team GB" content="SitePoint">
+
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body>
+    <nav>
+        <ul style="z-index: 999;">
+
+            <li class="floatright1" style="float:right"><a href="#paragraph1">Shop</a></li>
+            <li class="floatright2" style="float:right"><a href="#home">Videos</a></li>
+            <li class="floatright3" style="float:right"><a href="#news">Athletes</a></li>
+            <li class="floatright4" style="float:right"><a href="#contact">News</a></li>
+
+            <li><a style="z-index: 999;" id="logolink" href="#about"><img id="logo" src="images/crest.png"
+                        alt="TEAM GB LOGO"></a></li>
+            <li><a class="active" href="#about">Team GB</a></li>
+            <div id="headerbackground"></div>
+        </ul>
+    </nav>
+
+
+    <div class="hero-image">
+        <div class="hero-text">
+            <h1 style="font-size:80px; font-style:Circular-Black;">FUNDRAISING</h1>
+            <h2 style="font-size:22px; font-style: Circular-Black;">Donate here to help fund your nations team and make dreams come true. Thank you!
+            </h2>
+            <!-- <div id="donateheader" class="donatewidget"><input class="paymentamount" type="text"
+                    placeholder="Amount to donate (£)"><input class="paymentbutton" type="button" value="PayPal"><input
+                    class="paymentbutton" type="button" value="Visa"><input class="paymentbutton" type="button"
+                    value="MasterCard"><input class="paymentbutton" type="button" value="Apple Pay"></div> -->
+
+        </div>
+
+    </div>
+
+    <div id="donateheader" class="donatewidget"><input class="paymentamount" type="text"
+            placeholder="Amount to donate (£)"><input class="paymentbutton" id="paypalbutton" type="button"
+            value="PayPal"><input class="paymentbutton" type="button" id="mastercardbutton" value="MasterCard"><input
+            class="paymentbutton" type="button" id="visabutton" value="Visa"><input class="paymentbutton" type="button"
+            id="applebutton" value="Apple Pay"></div>
+
+    </div>
+
+    <div id="paragraph1" class="row paragraph">
+        <div class="">
+            <h1 style="font-size: 60px;">Why Donate?</h1>
+            <img class="news-hero" src="images/kidsgb.jpg" alt="Kids sporting Team GB shirts.">
+            <p>The British Olympic Association has two principal roles. Firstly, to prepare and lead our nation’s finest competitors at the
+                summer, winter and youth Olympic Games. Working with the NGBs, the BOA selects Team GB from the best
+                sportsmen and women who will go on to compete in the 28 summer and seven winter Olympic sports at the
+                greatest sporting competition in the world.
+                <br><br>
+                Secondly, the BOA seeks to develop, promote and protect the Olympic Movement within the UK in accordance
+                with the Olympic Charter and the Olympic Values of friendship, excellence and respect.
+                <br><br>
+
+                The BOA is independent, privately funded and receives no annual funding from the lottery or government
+                and has no political interests. The success of our mission is entirely dependent upon the income we
+                receive from our fundraising, donations, and events and, as a result, is the strong, independent voice for British
+                Olympic Sport.</p>
+                <h1 style="font-size: 60px;">Thank you,</h1>
+                <h1 style="margin-top: -50px; margin-bottom: -20px; font-size: 60px; color: #cb3244;">Team GB.</h1>
+
+        </div>
+    </div>
+
+
+
+
+    <div id="footer">
+        <div class="footer-container">
+            <div> <img id="bluecrest" src="images/crestblue.png" alt="TEAM GB BLUE CREST">
+                <h1 class="footertext">TEAM GB</h1>
+                <h1 id="footertext2" class="footertext"><b>BELIEVE</b> EXTRAORD<b>IN</b>ARY</h1>
+            </div>
+            <div> <a style="font-size: 30px;" href="#" class="fa fa-facebook"></a>
+                <a style="font-size: 30px;" href="#" class="fa fa-twitter"></a>
+                <a style="font-size: 30px;" href="#" class="fa fa-youtube"></a>
+                <a style="font-size: 30px;" href="#" class="fa fa-instagram"></a>
+
+            </div>
+        </div>
+    </div>
+    <script> </script>
+    <!-- <script>
+        $(document).ready(function () {
+            $(window).scroll(function () { // check if scroll event happened
+                if ($(document).scrollTop() > 720) { // check if user scrolled more than 50 from top of the browser window
+                    $("#headerbackground").addClass('nav-coloured');
+                    console.log("1");
+                } else {
+                    $("#headerbackground").removeClass('nav-coloured'); // if not, change it back to transparent
+                }
+            });
+        });
+    </script> -->
+    <script>
+        window.onscroll = function () {
+            myFunction()
+        };
+
+        var header = document.getElementById("donateheader");
+        var sticky = header.offsetTop;
+
+        function myFunction() {
+            if (window.pageYOffset > (sticky - 18)) {
+                header.classList.add("sticky");
+            } else {
+                header.classList.remove("sticky");
+            }
+        }
+    </script>
+</body>
+
+</html>
